@@ -5,7 +5,7 @@
 # various tasks such as real-time analytics, tracking data, and reporting. Your task is to
 # develop different modules for the aggregator using Python
 
-# Part 1
+# Part 01
 
 def filter_users(lst):
     return [u[1] for u in lst if u[2] > 30 and u[3] in {'USA', 'Canada'}]
@@ -26,7 +26,8 @@ def find_duplicates(lst):
     names = [u[1] for u in lst]
     return [n for n in set(names) if names.count(n) > 1]
 
-# Part 2 
+# Part 2
+#  
 def unique_users(trans):
     return len(set([t[1] for t in trans]))
 
@@ -50,11 +51,14 @@ def remove_set(B, ids):
     B.difference_update(ids)
 
 # Part 4:
+
 def filter_feedback(dic):
     return {k: v['rating'] for k, v in dic.items() if v['rating'] >= 4}
 
+
 def top_5_feedback(dic):
     return dict(sorted(dic.items(), key=lambda x: x[1]['rating'], reverse=True)[:5])
+
 
 def combine_feedback(dic_list):
     result = {}
@@ -66,6 +70,8 @@ def combine_feedback(dic_list):
             else:
                 result[k] = v
     return result
+
+
 
 def dict_comp(dic):
     return {k: v['rating'] for k, v in dic.items() if v['rating'] > 3}
