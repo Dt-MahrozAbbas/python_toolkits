@@ -27,7 +27,6 @@ def find_duplicates(lst):
     return [n for n in set(names) if names.count(n) > 1]
 
 # Part 2
-#  
 def unique_users(trans):
     return len(set([t[1] for t in trans]))
 
